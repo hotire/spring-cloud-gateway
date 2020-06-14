@@ -8,4 +8,4 @@ spring:
         - Path=/test/**
         filters:
         - StripPrefix= 1
-        - AddRequestHeader= X-Request-Foo, Bar
+        - AddRequestHeader= authentication, token
