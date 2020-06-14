@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: test
+        uri: https://www.naver.com
+        predicates:
+        - Path=/test/**
+        filters:
+        - StripPrefix= 1
+        - AddRequestHeader= X-Request-Foo, Bar
